@@ -1,4 +1,4 @@
-## hubtel-node
+## hubtel-sms
 An unofficial nodejs wrapper for sending SMS with [Hubtel](https://hubtel.com/).
 
 **You need to have an official Hubtel Account to use this library.**
