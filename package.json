@@ -1,11 +1,12 @@
 {
-  "name": "hubtel-node",
+  "name": "hubtel-sms",
   "version": "1.0.0",
-  "description": "An unofficial nodejs wrapper for Hubtel Ghana",
+  "description": "An unofficial nodejs wrapper for sending SMS with Hubtel.",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel ./src -d ./dist --ignore test.js",
-    "dev": "node -r babel-register  src/test.js"
+    "dev": "node -r babel-register  src/test.js",
+    "prepublish": "npm run build"
   },
   "author": "Kwabena Berko <kwabenaberko95@gmail.com>",
   "license": "ISC",
