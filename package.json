@@ -1,0 +1,22 @@
+{
+  "name": "hubtel-node",
+  "version": "1.0.0",
+  "description": "An unofficial nodejs wrapper for Hubtel Ghana",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel ./src -d ./lib --ignore test.js",
+    "dev": "node -r babel-register  src/test.js"
+  },
+  "author": "Kwabena Berko <kwabenaberko95@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0"
+  },
+  "dependencies": {
+    "base-64": "^0.1.0",
+    "request": "^2.83.0",
+    "utf8": "^2.1.2"
+  }
+}
