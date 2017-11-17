@@ -1,6 +1,6 @@
 {
   "name": "hubtel-sms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An unofficial nodejs wrapper for sending SMS with [Hubtel](https://hubtel.com/).",
   "main": "dist/index.js",
   "dependencies": {
