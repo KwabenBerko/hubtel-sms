@@ -1,18 +1,12 @@
 {
   "name": "hubtel-sms",
   "version": "1.0.1",
-  "description": "An unofficial nodejs wrapper for sending SMS with [Hubtel](https://hubtel.com/).",
+  "description": "An Node.js wrapper for sending Sms with [Hubtel](https://hubtel.com/).",
   "main": "dist/index.js",
   "dependencies": {
-    "base-64": "^0.1.0",
-    "request": "^2.83.0",
-    "utf8": "^2.1.2"
+    "axios": "^0.18.0"
   },
-  "devDependencies": {
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-register": "^6.26.0"
-  },
+  "devDependencies": {},
   "scripts": {
     "build": "babel ./src -d ./dist --ignore test.js",
     "dev": "node -r babel-register  src/test.js",
