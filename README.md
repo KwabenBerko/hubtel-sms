@@ -7,7 +7,7 @@
 ## Installation
 
 ```javascript
-npm install hubtel-lib
+npm install hubtel-sms
 ```
 
 ## Usage
