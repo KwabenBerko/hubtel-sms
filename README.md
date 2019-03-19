@@ -6,7 +6,7 @@
 
 ## Installation
 
-```javascript
+```
 npm install hubtel-sms
 ```
 
