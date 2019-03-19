@@ -1,6 +1,6 @@
 {
   "name": "hubtel-sms",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A Node.js wrapper for Hubtel's Sms API.",
   "main": "dist/index.js",
   "dependencies": {
