@@ -17,7 +17,7 @@ npm install hubtel-sms
 ```javascript
 import Hubtel from "Hubtel";
 
-const hubtel = new Hubtel({
+const hubtelSms = new HubtelSms({
   clientId: "YOUR_HUBTEL_CLIENT_ID",
   clientSecret: "YOUR_HUBTEL_CLIENT_SECRET"
 });
