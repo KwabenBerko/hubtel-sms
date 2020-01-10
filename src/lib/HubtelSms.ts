@@ -33,10 +33,10 @@ export class HubtelSms {
    * @returns {Promise<SendMessageResponse>} Promise<SendMessageResponse>
    */
 
-  quickSend = async (data: QuickSendMessage): Promise<SendMessageResponse> => {
+  async quickSend(data: QuickSendMessage): Promise<SendMessageResponse> {
     try {
       const response = await axios.get(
-        `${BASE_URL}/send?${qs.stringify(data)}&ClientId=${
+        `${BASE_URL}/send?${qs.stringify({...data})}&ClientId=${
           this.config.clientId
         }&ClientSecret=${this.config.clientSecret}`
       );
@@ -51,7 +51,7 @@ export class HubtelSms {
    * @param {SendMessage} SendMessage
    * @returns {Promise<SendMessageResponse>} Promise<SendMessageResponse>
    */
-  sendMessage = async (data: SendMessage): Promise<SendMessageResponse> => {
+  async sendMessage(data: SendMessage): Promise<SendMessageResponse> {
     try {
       const response = await axios.post(`${BASE_URL}`, data, {
         headers: this.headers
@@ -68,7 +68,7 @@ export class HubtelSms {
    * @returns {Promise<Message>} Promise<Message>
    */
 
-  getMessage = async (MessageId: string): Promise<Message> => {
+  async getMessage(MessageId: string): Promise<Message> {
     try {
       const response = await axios.get(`${BASE_URL}/${MessageId}`, {
         headers: this.headers
@@ -83,7 +83,7 @@ export class HubtelSms {
    * @async
    * @returns {Promise<QueryMessageResponse>} Promise<QueryMessageResponse>
    */
-  queryMessage = async (): Promise<QueryMessageResponse> => {
+  async queryMessage(): Promise<QueryMessageResponse>{
     try {
       const response = await axios.get(`${BASE_URL}`, {
         headers: this.headers
@@ -100,9 +100,9 @@ export class HubtelSms {
    * @param {ScheduleMessage} ScheduleMessage
    * @returns {Promise<SendMessageResponse>} Promise<SendMessageResponse>
    */
-  scheduleMessage = async (
+  async scheduleMessage(
     data: ScheduleMessage
-  ): Promise<SendMessageResponse> => {
+  ): Promise<SendMessageResponse>{
     try {
       const response = await axios.post(`${BASE_URL}`, data, {
         headers: this.headers
@@ -121,10 +121,10 @@ export class HubtelSms {
    * @returns {Promise<SendMessageResponse>} Promise<SendMessageResponse>
    */
   //Not Working
-  rescheduleScheduledMessage = async (
+  async rescheduleScheduledMessage(
     MessageId: string,
     Time: string
-  ): Promise<SendMessageResponse> => {
+  ): Promise<SendMessageResponse>{
     try {
       const response = await axios.put(
         `${BASE_URL}/${MessageId}`,
@@ -145,9 +145,9 @@ export class HubtelSms {
    * @param {string} MessageId
    * @returns {Promise<CancelScheduledMessageResponse>} Promise<CancelScheduledMessageResponse>
    */
-  cancelScheduledMessage = async (
+  async cancelScheduledMessage (
     MessageId: string
-  ): Promise<CancelScheduledMessageResponse> => {
+  ): Promise<CancelScheduledMessageResponse> {
     try {
       const response = await axios.delete(`${BASE_URL}/${MessageId}`, {
         headers: this.headers
