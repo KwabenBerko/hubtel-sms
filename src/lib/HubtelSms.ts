@@ -120,15 +120,14 @@ export class HubtelSms {
    * @param {string} Time
    * @returns {Promise<SendMessageResponse>} Promise<SendMessageResponse>
    */
-  //Not Working
-  async rescheduleScheduledMessage(
+  async rescheduleScheduledMessage(data: {
     MessageId: string,
     Time: string
-  ): Promise<SendMessageResponse>{
+  }): Promise<SendMessageResponse>{
     try {
       const response = await axios.put(
-        `${BASE_URL}/${MessageId}`,
-        { Time },
+        `${BASE_URL}/${data.MessageId}`,
+        { Time: data.Time },
         {
           headers: this.headers
         }
